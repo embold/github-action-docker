@@ -1,0 +1,23 @@
+name: 'Embold Scan'
+description: 'Embold design and code quality scanning engine'
+inputs:
+  embold-url:
+    description: 'URL of your Embold Server instance'
+    required: true
+  embold-token:
+    description: 'Embold Access Token corresponding to your Embold Server'
+    required: true
+  repo-config:
+    description: 'Repository configuration JSON used as settings while running the scan'
+    required: true
+  repo-uid:
+    description: 'UID of the repository on Embold Server, where results will be published'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://embold/embold-cli:latest'
+  args:
+    - ${{ inputs.embold-url }}
+    - ${{ inputs.embold-token }}
+    - ${{ inputs.repo-config }}
+    - ${{ inputs.repo-uid }}
