@@ -12,7 +12,7 @@ Use this Github Action to scan your code with [Embold](https://embold.io) and fi
 * You have an Embold Access Token corresponding to your account
 * The Repository to be analysed is created on Embold
 
-# Steps
+## Steps
 * Create a repository-configuration.json (download it from the Embold Repository using the "Download repository configuration" option)
 * Modify the following values:
     - `dataDir`: Set it to "./embold_data"
