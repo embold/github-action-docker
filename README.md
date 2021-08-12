@@ -2,6 +2,8 @@
 
 **[ THIS IS A PRE-RELEASE VERSION]**
 
+<img src="./images/embold-logo.png">
+
 Use this Github Action to scan your code with [Embold](https://embold.io) and find design, code quality and security issues.
 
 ## Pre-requisites
