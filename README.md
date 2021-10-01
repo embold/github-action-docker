@@ -1,7 +1,6 @@
-# EMBOLD SCAN
-
 <img src="./images/embold-logo.png">
 
+# EMBOLD Github Actions
 [Embold](https://embold.io) Github Actions uncovers potential bugs, vulnerabilities and hard-to-detect anti-patterns that make your code difficult to maintain and can lead to error-prone solutions.
  
 Embold is an AI-based software analytics platform that helps teams analyse and improve software quality. It analyses source code across 4 dimensions: code issues, design issues, metrics and duplication, and surfaces issues which impact stability, robustness, security, and maintainability. The Embold Score helps teams understand risk areas and prioritise the most important fixes.
