@@ -1,7 +1,5 @@
 # EMBOLD SCAN
 
-**[ THIS IS A PRE-RELEASE VERSION]**
-
 <img src="./images/embold-logo.png">
 
 [Embold](https://embold.io) Github Actions uncovers potential bugs, vulnerabilities and hard-to-detect anti-patterns that make your code difficult to maintain and can lead to error-prone solutions.
