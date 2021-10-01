@@ -20,22 +20,19 @@ Embold is an AI-based software analytics platform that helps teams analyse and i
 
 1.	Create remote repository on Embold UI and download repository-configuration.json. 
 2.	In your base folder, create repository-configuration.json and replace with below values:
-a.	"dataDir": "./EMBOLD_DATA",
-b.	"baseDir": "$GITHUB_WORKSPACE",
+   - "dataDir": "./EMBOLD_DATA",
+   - "baseDir": "$GITHUB_WORKSPACE",
 Commit the json file.
-3.	Secrets: Secrets can be created at the 2 levels
-
-a.	Repository level secret 
-EMBOLD_TOKEN: This is required to authenticate access to Embold. 
-You can set the EMBOLD_TOKEN environment variable in the "Secrets" settings page of your repository. For more details, refer [EAT documentation here](https://docs.embold.io/embold-access-token-eat/#embold-access-token-eat)
+3.	Secrets: Secrets can be created at 2 levels
+ - Repository level secret 
+   EMBOLD_TOKEN: This is required to authenticate access to Embold. 
+   You can set the EMBOLD_TOKEN environment variable in the "Secrets" settings page of your repository. For more details, refer [EAT documentation here](https://docs.embold.io/embold-access-token-eat/#embold-access-token-eat)
  
+  - Organization level secret
+   EMBOLD_TOKEN: This is required to authenticate access to Embold. 
+   You can set the EMBOLD_TOKEN environment variable in the "Secrets" settings page of your organization. For more details, refer [EAT documentation here](https://docs.embold.io/embold-access-token-eat/#embold-access-token-eat)
  
-b.	Organization level secret
-EMBOLD_TOKEN: This is required to authenticate access to Embold. 
-You can set the EMBOLD_TOKEN environment variable in the "Secrets" settings page of your organization. For more details, refer [EAT documentation here](https://docs.embold.io/embold-access-token-eat/#embold-access-token-eat)
- 
-
-4.	The workflow, usually declared in .github/workflows/main.yaml, and looks like:
+4.	The workflow is usually declared in .github/workflows/main.yaml, and looks like:
 
 ```
 # This is a basic workflow to help you get started with Actions
