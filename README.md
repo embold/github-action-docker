@@ -8,7 +8,7 @@ Embold is an AI-based software analytics platform that helps teams analyse and i
 ## PRE-REQUISITES
 1. You have Embold Enterprise License with version 1.9.2.0 and above.
 2. You have an Embold Access Token corresponding to your account
-3. The Repository to be analysed is created on Embold
+3. The repository to be analysed is linked to Embold
 4. Languages supported: Java, C/C++, Objective C, SQL, HTML, Apex.
 
 
