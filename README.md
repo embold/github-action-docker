@@ -41,7 +41,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Embold scan step
         id: embold
-        uses: embold/github-action-docker@v0.1
+        uses: embold/github-action-docker@v0.2
         with:
           embold-url: <Your Embold Server URL>
           embold-token: ${{ secrets.EMBOLD_TOKEN }}
