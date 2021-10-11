@@ -26,6 +26,4 @@ runs:
     - ${{ inputs.repo-config }}
     - ${{ inputs.repo-uid }}
     - ${{ inputs.verbose }}
- branding:
-  icon: 'play (triangle)'  
-  color: 'orange'
+
