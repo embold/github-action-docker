@@ -1,5 +1,5 @@
 name: 'Embold Github Actions'
-description: 'Scan your code on Embold to uncover security vulnerabilities, code issues, design anti patterns, duplication and metrics '
+description: 'Embold helps you find security vulnerabilities, code issues, design anti patterns, duplication and metrics in your source code.'
 inputs:
   embold-url:
     description: 'URL of your Embold Server instance'
@@ -26,3 +26,6 @@ runs:
     - ${{ inputs.repo-config }}
     - ${{ inputs.repo-uid }}
     - ${{ inputs.verbose }}
+    branding:
+  icon: 'play (triangle)'  
+  color: 'orange'
