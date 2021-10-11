@@ -1,5 +1,5 @@
-name: 'Embold Scan'
-description: 'Embold design and code quality scanning engine'
+name: 'Embold Github Actions'
+description: 'Scan your code on Embold to uncover security vulnerabilities, code issues, design anti patterns, duplication and metrics '
 inputs:
   embold-url:
     description: 'URL of your Embold Server instance'
