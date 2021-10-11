@@ -46,7 +46,9 @@ jobs:
           embold-url: <Your Embold Server URL>
           embold-token: ${{ secrets.EMBOLD_TOKEN }}
           repo-config: '/github/workspace/repository-configuration.json'
-          repo-uid: <The Embold Repository UID> 
+          repo-uid: <The Embold Repository UID>
+          # Uncomment the below line for verbose logging
+          # verbose: true
 ```
 
 5.	Embold Github action will then scan your source code on push.
