@@ -49,6 +49,10 @@ inputs:
     description: 'Continue workflow execution even if scan fails'
     required: false
     default: 'true'
+  snapshotLabel:
+    description: 'Label to identify the snapshot published on Embold UI after a successful scan. Accepts a plain string or an environment variable.'
+    required: false
+    default: ''
 outputs:
   status:
     description: 'Status of the scan'
@@ -95,6 +99,11 @@ runs:
           QG_FLAG="-qg"
         fi
         
+        SNAPSHOT_FLAG=""
+        if [ -n "${{ inputs.snapshotLabel }}" ]; then
+          SNAPSHOT_FLAG="-s \"${{ inputs.snapshotLabel }}\""
+        fi
+
         ./browserstack-codequality-scanner/bin/embold-scanner analyse \
         -u "${{ inputs.emboldUrl }}" \
         -t "$EMBOLD_TOKEN" \
@@ -103,7 +112,8 @@ runs:
         -d "${{ inputs.tempDirectory }}" \
         -b "${{ inputs.baseDirectory }}" \
         $VERBOSE_FLAG \
-        $QG_FLAG
+        $QG_FLAG \
+        $SNAPSHOT_FLAG
     
     - name: Get Quality Gate Status
       if: ${{ inputs.qualityGate == 'true' }}
