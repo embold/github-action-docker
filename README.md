@@ -57,6 +57,10 @@ See [LICENSE](./LICENSE).
 
 **Optional** Continue workflow execution even if scan fails. Default: `true`
 
+#### `snapshotLabel`
+
+**Optional** Label to identify the snapshot published on the Embold UI after a successful scan. Accepts a plain string or an environment variable (e.g., `$GITHUB_SHA` or `$GITHUB_REF_NAME`). Default: `` (empty — no label)
+
 ## Outputs
 
 #### `status`
@@ -143,6 +147,7 @@ jobs:
           repositoryConfigPath: repository-configuration.json
           verbose: true
           qualityGate: 'true'
+          snapshotLabel: ${{ github.ref_name }}-${{ github.sha }}
 ```
 
 ## Prerequisites
